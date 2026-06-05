@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Excel Institute</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #f8f9fa;
+        }
+
+        .course-card{
+            transition: 0.3s;
+        }
+
+        .course-card:hover{
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .course-card img{
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .page-header{
+            background: linear-gradient(to right,#0d6efd,#0a58ca);
+            color: white;
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                Excel Institute
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Our Courses</h1>
+            <p class="lead">
+                Explore industry-oriented programs designed for future success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="container my-5">
+
+        <div class="row g-4">
+
+            <!-- Web Development -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="cse.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Web Development</h4>
+                        <p>
+                            Learn HTML, CSS, Bootstrap, JavaScript,
+                            React and modern web technologies.
+                        </p>
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="python.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Python Programming</h4>
+                        <p>
+                            Master Python fundamentals, OOP,
+                            automation and real-world projects.
+                        </p>
+                        <button class="btn btn-success">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="ds.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Data Science</h4>
+                        <p>
+                            Learn data analysis, visualization,
+                            statistics and predictive modeling.
+                        </p>
+                        <button class="btn btn-info text-white">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="ai.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>AI & Machine Learning</h4>
+                        <p>
+                            Build intelligent systems using machine
+                            learning and deep learning techniques.
+                        </p>
+                        <button class="btn btn-warning">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Java -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="java.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Java Programming</h4>
+                        <p>
+                            Learn Core Java, Advanced Java,
+                            JDBC, Servlets and Spring Framework.
+                        </p>
+                        <button class="btn btn-danger">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud Computing -->
+            <div class="col-md-4">
+                <div class="card course-card h-100">
+                    <img src="cloud.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Cloud Computing</h4>
+                        <p>
+                            Understand AWS, Azure, virtualization,
+                            deployment and cloud architecture.
+                        </p>
+                        <button class="btn btn-dark">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">
+            © 2026 Excel Institute of Technology & Management
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```

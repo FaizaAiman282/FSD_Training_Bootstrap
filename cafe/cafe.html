@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .carousels{
+            justify-content: center;
+        }
+        .image{
+            height:500px;
+            width:100%;
+            object-fit: cover;
+        }
+        h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 60px;
+            font-weight: 600;
+        }
+        p{
+            color: rgb(22, 24, 39);
+            margin:40px;
+            font-weight:500;
+        }
+        .coffee-section {
+            padding: 100px 0;
+            min-height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1  style="color:bisque; background-color: rgb(173, 108, 34);" class="text-center p-3">Quick Coffeee!!!</h1>
+    <div class="container-fluid text-white py-2 d-flex justify-content-center" style="background-color: rgb(233, 198, 154); ">
+        <div class="row justify-content-center">
+            
+            <div class="carousels py-3">
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        
+                        <div class="carousel-item active">
+                            <a href="#espresso-section">
+                                <img src="espresso.png" class="d-block w-100 image" alt="Espresso">
+                            </a>
+                            <p>Espresso</p>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <a href="#mocha-section">
+                                <img src="mocha.png" class="d-block w-100 image" alt="Mocha">
+                            </a>
+                            <p>Mocha</p>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <a href="#americano-section">
+                                <img src="matcha.png" class="d-block w-100 image" alt="Americano">
+                            </a>
+                            <p>Iced Matcha</p>
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="espresso-section" class="container-fluid coffee-section text-dark text-center" style="background-color: rgb(205, 169, 125);">
+    <h2 class="pt-4" style="color: #4a2c2a; font-weight: bold;">The Classic Espresso</h2>
+    <p class="text-dark">The pure, unadulterated essence of the coffee bean—bold, intense, and wakeful.</p>
+    
+    <div class="row d-flex justify-content-center py-3">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" style="background-color: antiquewhite;">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #4a2c2a;">Single / Double Shot</h5>
+                    <p class="card-text">Forced under high pressure, our espresso delivers a concentrated burst of rich flavor with a thick, golden crema on top. Notes of dark chocolate and roasted nuts.</p>
+                    <a href="#" class="btn text-white" style="background-color: rgb(145, 98, 36);">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="mocha-section" class="container-fluid coffee-section text-dark text-center" style="background-color: rgb(185, 149, 105);">
+    <h2 class="pt-4" style="color: #3d251e; font-weight: bold;">Rich Caffè Mocha</h2>
+    <p class="text-dark">A luxurious, comforting treat for those who love their coffee with a sweet twist.</p>
+    
+    <div class="row d-flex justify-content-center py-3">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" style="background-color: antiquewhite;">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #3d251e;">Signature Espresso & Cocoa</h5>
+                    <p class="card-text">The perfect marriage of rich espresso, decadent chocolate sauce, and smooth steamed milk. Finished with sweet cocoa notes and a creamy texture.</p>
+                    <a href="#" class="btn text-white" style="background-color: rgb(145, 98, 36);">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="matcha-section" class="container-fluid coffee-section text-dark text-center" style="background-color: rgb(155, 175, 135);">
+    <h2 class="pt-4" style="color: #2d4a22; font-weight: bold;">Pure Ceremonial Matcha</h2>
+    <p class="text-dark">A vibrant, antioxidant-rich green tea experience that offers a calm, focused energy boost.</p>
+    
+    <div class="row d-flex justify-content-center py-3">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" style="background-color: antiquewhite;">
+                <div class="card-body">
+                    <h5 class="card-title" style="color: #2d4a22;">Stone-Ground Green Tea</h5>
+                    <p class="card-text">Premium Japanese matcha whisked into smooth perfection. Enjoy it traditional style with hot water, or creamy as a latte. Features earthy, sweet undertones and a velvety finish.</p>
+                    <a href="#" class="btn text-white" style="background-color: rgb(75, 110, 60);">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
