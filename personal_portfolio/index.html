@@ -10,7 +10,6 @@
 <style>
     body {
         scroll-behavior: smooth;
-       
     }
 
     .section-title {
@@ -170,7 +169,7 @@
 <div class="row g-4">
 
     <div class="col-md-3">
-        <div class="card">
+        <div class="card" >
             <div class="card-body">
                 <h5>Portfolio Website</h5>
                 <p>Personal responsive portfolio.</p>
@@ -181,18 +180,18 @@
     </div>
 
     <div class="col-md-3">
-        <div class="card">
+        <div class="card " >
             <div class="card-body">
                 <h5>Event System</h5>
                 <p>College event management system.</p>
                 <p>HTML, CSS, Bootstrap, JavaScript</p>
-                <a href="#" class="btn btn-sm btn-dark">GitHub</a>
+                <a href="https://github.com/FaizaAiman282/FSD_Training_Bootstrap/tree/main/Events" class="btn btn-sm btn-dark">GitHub</a>
             </div>
         </div>
     </div>
 
     <div class="col-md-3">
-        <div class="card">
+        <div class="card" >
             <div class="card-body">
                 <h5>Online Course Registration Portal</h5>
                 <p>Technical Course Registration website.</p>
@@ -203,12 +202,12 @@
     </div>
 
     <div class="col-md-3">
-        <div class="card">
+        <div class="card" >
             <div class="card-body">
                 <h5>Student Management Portal</h5>
                 <p>To track student's progress.</p>
                 <p>HTML, CSS, Bootstrap</p>
-                <a href="https://github.com/FaizaAiman282/FSD_Training_Bootstrap/tree/main/student_portal" class="btn btn-sm btn-dark">GitHub</a>
+                <a href="https://github.com/FaizaAiman282/FSD_Training_Bootstrap/tree/main/student_portal" class="btn btn-sm btn-dark ">GitHub</a>
             </div>
         </div>
     </div>
@@ -224,7 +223,7 @@
 <div class="row">
 
     <div class="col-md-3">
-        <div class="card  p-3">
+        <div class="card  pt-4 p-3" style="height: 350px;">
             <h5 class="text-center">Certification</h5>
             <ul>
             <li><p>Red Hat Application Development I: Programming in Java EE (AD183 - RHA) - Ver. 7.0</p></li>
@@ -235,21 +234,21 @@
     </div>
 
     <div class="col-md-3">
-        <div class="card text-center p-3">
+        <div class="card text-center pt-4 p-3" style="height: 350px;">
             <h5>Workshop</h5>
             <p>AI & ML Workshop</p>
         </div>
     </div>
 
     <div class="col-md-3">
-        <div class="card text-center p-3">
+        <div class="card text-center pt-4 p-3" style="height: 350px;">
             <h5>Internship</h5>
             <p>Frontend Developer Intern</p>
         </div>
     </div>
 
     <div class="col-md-3">
-        <div class="card text-center p-3">
+        <div class="card text-center pt-4 p-3" style="height: 350px;">
             <h5>Award</h5>
             <p>Best Student Project Award</p>
         </div>
@@ -267,17 +266,15 @@
 <div class="row justify-content-center">
 <div class="col-md-6">
 
-<form>
+<form id="contactForm">
+    <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
+    <input type="email" id="email" class="form-control mb-3" placeholder="Email" required>
+    <input type="text" id="subject" class="form-control mb-3" placeholder="Subject" required>
+    <textarea id="message" class="form-control mb-3" rows="5" placeholder="Message" required></textarea>
 
-<input type="text" class="form-control mb-3" placeholder="Name">
-<input type="email" class="form-control mb-3" placeholder="Email">
-<input type="text" class="form-control mb-3" placeholder="Subject">
-<textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
-
-<button type="submit" class="btn btn-primary w-100">
-Send Message
-</button>
-
+    <button type="submit" class="btn btn-primary w-100">
+    Send Message
+    </button>
 </form>
 
 </div>
@@ -291,6 +288,38 @@ Send Message
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        const newMessage = {
+            id: Date.now(),
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            date: new Date().toLocaleString()
+        };
+
+        let messagesArray = JSON.parse(localStorage.getItem('portfolioMessages')) || [];
+
+        messagesArray.push(newMessage);
+
+        localStorage.setItem('portfolioMessages', JSON.stringify(messagesArray));
+
+        alert('Thank you, ' + name + '! Your message has been saved to local storage.');
+
+        document.getElementById('contactForm').reset();
+
+        console.log("Updated Messages in LocalStorage:", JSON.parse(localStorage.getItem('portfolioMessages')));
+    });
+</script>
 
 </body>
 </html>
